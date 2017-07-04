@@ -9,7 +9,8 @@ const root = angular
     ngRoute,
     App
   ])
-  .config(($routeProvider) => {
+  .config(($routeProvider,$locationProvider) => {
+    $locationProvider.html5Mode(true);
     $routeProvider
       .when('/',{
           templateUrl: './views/home.html'
